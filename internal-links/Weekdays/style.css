@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background:linear-gradient(#01012e,#240019) ;
+    height: 100vh;
+}
+
+.container {
+    background-image: url(Images/stars1.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list li {
+    color: aqua;
+    padding: 20px 40px;
+    margin: 30px 0px;
+    text-align: center;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+.list:hover li {
+    opacity: 0;
+}
+
+.list li:hover {
+    justify-content: center;
+    height: 75px;
+    width: 150px;
+    align-items: center;
+    display: flex;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.list li::after {
+    content:attr(class);
+    color: aquamarine;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 90px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.list li:hover::after {
+    opacity: 0.7;
+    transition: 0.5s;
+}
